@@ -1,0 +1,64 @@
+@font-face {
+  font-family: inter-Semibold;
+  src: url("../assets/Inter-SemiBold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter-Semibold, Arial, Helvetica, sans-serif;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.preview-container {
+  position: relative;
+}
+.preview-container::before {
+  content: url("../assets/Vector\ 1.svg");
+  position: absolute;
+  top: -160px;
+  left: -270px;
+  z-index: -1;
+}
+img {
+  position: relative;
+  z-index: 1;
+  margin-top: 5rem;
+}
+h1 {
+  color: #2f213a;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+p {
+  width: 100%;
+  color: rgb(0, 0, 0, 30%);
+  font-size: 16px;
+  line-height: 28px;
+}
+.description-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 375px;
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 805px) {
+  .description-container {
+    text-align: left;
+  }
+  .preview-container::before {
+    top: -100px;
+  }
+}
+@media screen and (min-width:1320px) {
+  .preview-container::before {
+   display: none;
+  }
+}
